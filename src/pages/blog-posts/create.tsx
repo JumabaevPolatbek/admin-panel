@@ -10,6 +10,8 @@ import MDEditor from '@uiw/react-md-editor';
 import { Attributes, Post } from 'interfaces/post';
 import FormItem from 'antd/es/form/FormItem';
 import { useForm } from '@refinedev/react-hook-form';
+import TinyMce from 'components/tinymc';
+import { AntdInferencer } from '@refinedev/inferencer/antd';
 const optionsTitle = [
     { label: 'Qaraqalpaq', value: 'title_kk' },
     { label: `O'zbek`, value: 'title_uz' },
@@ -115,7 +117,8 @@ export const BlogPostCreate: React.FC<IResourceComponentsProps> = () => {
                     },
                 ]}
             >
-                <MDEditor data-color-mode="light" />
+                {/* <MDEditor data-color-mode="light" /> */}
+                <TinyMce />
             </Form.Item>
             <button type="submit">Save</button>
         </Form>
